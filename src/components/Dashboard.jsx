@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import User from './User.jsx'
+import Installations from './Installations.jsx'
 import '../styles/Dashboard.css'
 
 function Dashboard() {
@@ -48,7 +49,8 @@ function Dashboard() {
                     {/* <img src={data.avatar_url} alt="User Avatar" className='avatar' />
                     <h3>@{data.login}</h3> */}
                     {/* <p>{JSON.stringify(data, null, 2)}</p> */}
-                    <User user={data} installations={{repositories: []}}/>
+                    <User user={data} installations={{repositories: []}} />
+                    <User installations={{}} />
                 </div>
             }
         </>
