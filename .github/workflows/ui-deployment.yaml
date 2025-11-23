@@ -1,8 +1,19 @@
-  # Stage 2.5: Build and Deploy React UI to S3
+name: Build and Deploy React UI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
   deploy-ui:
     name: Build and Deploy React UI
     runs-on: ubuntu-latest
     needs: package
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      CLOUDFRONT_DIST_ID: ${{ secrets.CLOUDFRONT_DIST_ID }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,7 +34,7 @@
         with:
           args: --delete
         env:
-          AWS_S3_BUCKET: ${{ env.S3_BUCKET_NAME }}
+          AWS_S3_BUCKET: ${{ env.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ env.AWS_REGION }}
