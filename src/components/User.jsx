@@ -2,7 +2,7 @@ import { Github, Activity, GitBranch } from 'lucide-react'
 
 function User({ user, installations }) {
     return (
-        <div className="w-80 bg-white border-r border-gray-200 p-6 overflow-y-auto">
+        <div className="w-80 min-h-screen bg-white border-r border-gray-200 p-6 overflow-y-auto flex-shrink-0">
             <div className="flex items-center gap-3 mb-6">
                 <Github className="w-8 h-8 text-gray-900" />
                 <h1 className="text-xl font-bold text-gray-900">TGRAFY Dashboard</h1>
