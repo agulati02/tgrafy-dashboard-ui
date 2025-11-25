@@ -50,7 +50,7 @@ function Dashboard() {
                     <h3>@{data.login}</h3> */}
                     {/* <p>{JSON.stringify(data, null, 2)}</p> */}
                     <User user={data} installations={{repositories: []}} />
-                    <User installations={{}} />
+                    <User installations={{repositories: []}} />
                 </div>
             }
         </>
