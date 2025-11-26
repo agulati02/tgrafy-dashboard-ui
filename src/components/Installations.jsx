@@ -15,8 +15,8 @@ function Installations({ installations }) {
                 <div className="mb-8">
                     <div className="flex items-center justify-between mb-4">
                         <div>
-                            <h1 className="text-3xl font-bold text-gray-900 mb-2">Active Installations</h1>
-                            <p className="text-gray-600">Manage repositories where your app is installed</p>
+                            <h1 className="text-3xl font-bold text-gray-50 mb-2">Active Installations</h1>
+                            <p className="text-gray-50">Manage repositories where your app is installed</p>
                         </div>
                         <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                             <Plus className="w-5 h-5" />
@@ -26,7 +26,7 @@ function Installations({ installations }) {
 
                     {/* Search Bar */}
                     <div className="relative">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50 w-5 h-5" />
                         <input
                             type="text"
                             placeholder="Search repositories..."
@@ -40,13 +40,13 @@ function Installations({ installations }) {
                 {/* Repository Table */}
                 <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                     <table className="w-full">
-                    <thead className="bg-gray-50 border-b border-gray-200">
+                    <thead className="bg-gray-600 border-b border-gray-200">
                         <tr>
-                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-600 uppercase tracking-wider">Repository</th>
-                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
-                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-600 uppercase tracking-wider">Last Activity</th>
-                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-600 uppercase tracking-wider">Stars</th>
-                        <th className="text-right py-3 px-6 text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Repository</th>
+                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Status</th>
+                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Last Activity</th>
+                        <th className="text-left py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Stars</th>
+                        <th className="text-right py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Actions</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -91,7 +91,7 @@ function Installations({ installations }) {
                     </table>
                     
                     {filteredRepos.length === 0 && (
-                    <div className="text-center py-12 text-gray-500">
+                    <div className="text-center py-12 text-gray-50">
                         <Github className="w-12 h-12 mx-auto mb-3 opacity-50" />
                         <p>No repositories found</p>
                     </div>

@@ -45,7 +45,7 @@ function Dashboard() {
             {/* {error && <p style={{ color: 'red' }}>Error: {error}</p>} */}
             {
                 data && 
-                <div className="flex h-screen bg-gray-50">
+                <div className="flex h-screen bg-gray-800">
                     {/* <img src={data.avatar_url} alt="User Avatar" className='avatar' />
                     <h3>@{data.login}</h3> */}
                     {/* <p>{JSON.stringify(data, null, 2)}</p> */}
