@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import User from './User.jsx'
 import Installations from './Installations.jsx'
+import Cookies from "js-cookie"
 import '../styles/Dashboard.css'
 
 function Dashboard() {
@@ -17,11 +18,13 @@ function Dashboard() {
 
         async function fetchData() {
             try {
+                const accessToken = Cookies.get("TgAccessToken")
                 const res = await fetch(`https://api-tgrafy.agulati.cc/api/v1/users/profile?user_id=${user_id}`, { 
                     method: 'GET',
                     credentials: 'include',
                     headers: {
                         'Accept': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`
                     }
                 })
                 if (!res.ok) throw new Error(`Request failed: ${res.status}`)
