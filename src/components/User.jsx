@@ -2,7 +2,7 @@ import { Github, Activity, GitBranch } from 'lucide-react'
 
 function User({ user, installations }) {
     return (
-        <div className="w-80 min-h-screen bg-gray-600 border-r border-gray-200 p-6 overflow-y-auto flex-shrink-0">
+        <div className="w-80 min-h-screen bg-gray-800 border-r border-gray-500 p-6 overflow-y-auto flex-shrink-0">
             <div className="flex items-center gap-3 mb-6">
                 <Github className="w-8 h-8 text-gray-100" />
                 <h1 className="text-xl font-bold text-gray-100">TGRAFY Dashboard</h1>
@@ -14,24 +14,24 @@ function User({ user, installations }) {
                     <img
                         src={user.avatar_url}
                         alt={user.name}
-                        className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-100"
+                        className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-gray-500"
                     />
                     <h2 className="text-xl font-bold text-gray-50">{user.name}</h2>
-                    <p className="text-gray-50 mb-2">@{user.login}</p>
+                    <p className="text-gray-400 mb-2">@{user.login}</p>
                     <p className="text-sm text-gray-50 italic">{user.bio}</p>
                 </div>
 
                 {/* User Stats */}
-                <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-200">
+                <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-500">
                     <div className="text-center">
                         <div className="text-xl font-bold text-gray-50">{user.followers}</div>
                         <div className="text-xs text-gray-50">Followers</div>
                     </div>
-                        <div className="text-center">
+                    <div className="text-center">
                         <div className="text-xl font-bold text-gray-50">{user.following}</div>
                         <div className="text-xs text-gray-50">Following</div>
                     </div>
-                        <div className="text-center">
+                    <div className="text-center">
                         <div className="text-xl font-bold text-gray-50">{user.public_repos}</div>
                         <div className="text-xs text-gray-50">Repos</div>
                     </div>
@@ -50,7 +50,7 @@ function User({ user, installations }) {
                 </div>
 
                 {/* Quick Stats Card */}
-                <div className="bg-blue-50 rounded-lg p-4 space-y-2">
+                <div className="bg-gray-700 rounded-lg p-4 space-y-2">
                     <h3 className="font-semibold text-gray-50 text-sm">Activity Summary</h3>
                     <div className="text-xs text-gray-50 space-y-1">
                     <div className="flex justify-between">

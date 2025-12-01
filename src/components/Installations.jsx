@@ -32,15 +32,15 @@ function Installations({ installations }) {
                             placeholder="Search repositories..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-700 text-gray-50"
                         />
                     </div>
                 </div>
 
                 {/* Repository Table */}
-                <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <div className="bg-gray-800 rounded-lg overflow-hidden">
                     <table className="w-full">
-                    <thead className="bg-gray-600 border-b border-gray-200">
+                    <thead className="border-b border-gray-200">
                         <tr>
                         <th className="text-left py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Repository</th>
                         <th className="text-left py-3 px-6 text-xs font-semibold text-gray-50 uppercase tracking-wider">Status</th>
