@@ -18,13 +18,11 @@ function Dashboard() {
 
         async function fetchData() {
             try {
-                const accessToken = Cookies.get("TgAccessToken")
                 const res = await fetch(`https://api-tgrafy.agulati.cc/api/v1/users/profile?user_id=${user_id}`, { 
                     method: 'GET',
                     credentials: 'include',
                     headers: {
-                        'Accept': 'application/json',
-                        'Authorization': `Bearer ${accessToken}`
+                        'Accept': 'application/json'
                     }
                 })
                 if (!res.ok) throw new Error(`Request failed: ${res.status}`)
